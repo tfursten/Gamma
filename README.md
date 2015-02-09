@@ -12,3 +12,7 @@ An algorithm for generating a gamma variables X~Gamma(a,b) for a>=1.
 
 Uniform random variables are generated using Xorshift64.h  
 Normal random variables are generated using the Ziggurat Algorithm ([Marsaglia and Tsang 2000](http://www.jstatsoft.org/v05/i08/paper)) in rnormal.h. 
+
+###Testing
+This implementation of the Marsaglia and Tsang method for generating Gamma distributed random numbers is approximately 13% faster than the GSL implementation using their fastest random number generator (taus). Below is a QQ-Plot of 1.0x10^8 random values from each implementation.
+![Alt text](https://github.com/tfursten/Gamma/blob/master/img/qqplot.png?raw=true =10x10)
