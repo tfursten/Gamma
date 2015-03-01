@@ -31,10 +31,10 @@ int main(){
     ofstream myfile;
     Gamma gam;
     gsl_rng * myrand2 = gsl_rng_alloc(gsl_rng_taus);
-    myfile.open("test1.txt");
+    myfile.open("./Notebook/test1.txt");
     myfile << "myGamma\tGSLGamma" << endl;
-    double alpha = 0.5;
-    double beta = 0.61;
+    double alpha = 8;
+    double beta = 6;
     int it = 100000;
     gam.initialize(alpha, beta);
     //gslgamma(alpha,beta,it);
