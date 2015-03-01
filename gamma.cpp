@@ -28,7 +28,7 @@ double Gamma::rand_gamma(xorshift64& rand){
         if(log(u) < 0.5 * x * x + dd * (1 - v + log(v)))
             break;
     }
-    d = beta * dd * v;
+    d = 1/beta * dd * v;
     if(p >= 1)
         return d;
     else{

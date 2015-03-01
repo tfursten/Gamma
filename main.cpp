@@ -27,23 +27,23 @@ int mygamma(double alpha, double beta, int it){
 }
 
 int main(){
-    //xorshift64 myrand;
-    //ofstream myfile;
-    //Gamma gam;
-    //gsl_rng * myrand2 = gsl_rng_alloc(gsl_rng_taus);
-    //myfile.open("test5.txt");
-    //myfile << "myGamma\tGSLGamma" << endl;
-    double alpha = 10;
-    double beta = 7.42;
-    int it = 100000000;
-    //gam.initialize(alpha, beta);
+    xorshift64 myrand;
+    ofstream myfile;
+    Gamma gam;
+    gsl_rng * myrand2 = gsl_rng_alloc(gsl_rng_taus);
+    myfile.open("test1.txt");
+    myfile << "myGamma\tGSLGamma" << endl;
+    double alpha = 0.5;
+    double beta = 0.61;
+    int it = 100000;
+    gam.initialize(alpha, beta);
     //gslgamma(alpha,beta,it);
-    mygamma(alpha,beta,it);
-    /*for(int i = 0; i<it; i++){
+    //mygamma(alpha,beta,it);
+    for(int i = 0; i<it; i++){
         double d1 = gam.rand_gamma(myrand);
-        double d2 = gsl_ran_gamma(myrand2,alpha,beta);
+        double d2 = gsl_ran_gamma(myrand2,alpha,1/beta);
         myfile<<d1<<"\t"<<d2<<endl;
-    }*/
+    }
 
     return 0;
 }
