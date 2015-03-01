@@ -15,5 +15,5 @@ Normal random variables are generated using the Ziggurat Algorithm ([Marsaglia a
 
 ###Testing
 [View Notebook](http://nbviewer.ipython.org/github/tfursten/Gamma/blob/master/Notebook/Summary.ipynb)  
-This implementation of the Marsaglia and Tsang method for generating Gamma distributed random numbers runs faster than the GSL implementation using their fastest random number generator (taus) but does not work for low values of alpha (<1). Below is a QQ-Plot of 1.0x10^7 random values from each implementation.
+This implementation of the Marsaglia and Tsang method for generating Gamma distributed random numbers runs faster than the GSL implementation using their fastest random number generator (taus) but does not work for low values of alpha (<0.5). Below is a QQ-Plot of 1.0x10^7 random values from each implementation.
 ![Alt text](https://github.com/tfursten/Gamma/blob/master/img/qqplot.png?raw=true =10x10)
