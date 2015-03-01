@@ -10,9 +10,7 @@
 class Gamma
 {
 private:
-	double beta;
-	double dd;
-	double cc;
+	double alpha, beta, p, dd, cc;
 public:
 	void initialize(double a, double b);
 	double rand_gamma(xorshift64& rand);
