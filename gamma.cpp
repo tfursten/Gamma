@@ -9,7 +9,7 @@ void Gamma::initialize(double a, double b){
         p = a;
     }
     else p = 1;
-	dd = a-(1/3.0);
+	dd = alpha-(1/3.0);
 	cc = (1.0/3.0)/sqrt(dd);
 }
 
@@ -33,6 +33,6 @@ double Gamma::rand_gamma(xorshift64& rand){
         return d;
     else{
         u = rand.get_double52();
-        return d * pow(u,1.0/alpha);
+        return d * pow(u,1.0/p);
     }
 }

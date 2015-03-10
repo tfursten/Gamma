@@ -28,15 +28,17 @@ int mygamma(double alpha, double beta, int it){
 
 int main(){
     xorshift64 myrand;
+    myrand.seed(98756651651);
     ofstream myfile;
     Gamma gam;
     gsl_rng * myrand2 = gsl_rng_alloc(gsl_rng_taus);
-    myfile.open("./Notebook/test1.txt");
+    myfile.open("./Notebook/test05.txt");
     myfile << "myGamma\tGSLGamma" << endl;
-    double alpha = 8;
-    double beta = 6;
+    double alpha = 0.5;
+    double beta = 0.612;
     int it = 100000;
     gam.initialize(alpha, beta);
+
     //gslgamma(alpha,beta,it);
     //mygamma(alpha,beta,it);
     for(int i = 0; i<it; i++){
