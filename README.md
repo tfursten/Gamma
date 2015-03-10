@@ -4,7 +4,8 @@ Gamma rejection sampling from [Marsaglia and Tsang 2000](http://delivery.acm.org
 
 An algorithm for generating a gamma variables X~Gamma(a,b).  
 rand_Gamma
-1. if a < 1: 
+
+1. if a < 1:
   1. Return rand_Gamma(a+1,b) * U^(1/a)
 2. Set-up d = a -1/3 and c = 1/sqrt(9d).
 3. Generate: v = (1+c*x)^3, drawing x from a standard normal. Repeat if v <= 0 [rare].
